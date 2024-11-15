@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: Arial;
+}
+:root {
+  --color-font-primary: rgb(245, 17, 17);
+}
+.game-interface {
+  padding: 1px;
+}
+.game-stats-list {
+  margin-left: 400px;
+  margin-top: 80px;
+}
+#game-stats-deaths {
+  color: var(--color-font-primary);
+}
+.character-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 120px;
+  gap: 300px;
+
+  #countdown-timer,
+  #equal-sign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    text-align: center;
+    z-index: 10;
+  }
+  #computer-display-image,
+  #player-display-image {
+    height: 300px;
+    width: auto;
+  }
+
+  .game-gallery-caption {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .character-attack-list li,
+  .computer-attack-list li {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  #player-choice,
+  #computer-choice {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-font-primary);
+  }
+  #character-gallery-attack-player,
+  #character-gallery-attack-computer {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  #player-wins {
+    background-color: rgba(57, 56, 56, 0.6);
+    color: rgb(250, 214, 9);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    padding: 0.4rem;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0.4rem;
+  }
+  #player-loses {
+    background-color: rgba(57, 56, 56, 0.6);
+    color: rgb(254, 58, 58);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    padding: 0.4rem;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0.4rem;
+  }
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  #game-interface-play-button {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 8%;
+    border-color: black;
+    font-size: 1.5rem;
+  }
+}

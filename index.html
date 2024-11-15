@@ -3,37 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
-    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
     <title>Rock, Paper, Scissors</title>
   </head>
   <body class="game-interface">
     <div>
-      <ul class="game-stats-list">
-        <li class="game-stats-item">Plays (no ties)</li>
-        <li class="game-stats-item">Deaths</li>
+      <ul class="game-stats-list" type="none">
+        <li id="game-stats-plays">Plays (no ties):</li>
+        <li id="game-stats-deaths">Deaths:</li>
       </ul>
     </div>
     <div class="character-gallery">
-      <div class="character-display-player">
+      <div id="character-display-player">
         <img
-          src="./assets/Luke_Skywalker.jpg"
+          src="./assets/Luke_Skywalker_Battlefront.webp"
           alt="Lucke Skywalker cover"
-          class="character-display-image"
+          id="player-display-image"
         />
-        <p class="game-gallery-caption">Player</p>
+        <h1 class="game-gallery-caption">Player</h1>
+        <ul class="character-attack-list" type="none">
+          <li id="character-gallery-attack-player">...attacks with</li>
+        </ul>
       </div>
-      <div class="character-display-computer">
+      <div id="character-display-computer">
         <img
           src="./assets/Darth_Vader.jpg"
           alt="Darth Vader cover"
-          class="character-display-image"
+          id="computer-display-image"
         />
-        <p class="game-gallery-caption">Computer</p>
+        <h1 class="game-gallery-caption">Computer</h1>
+        <ul class="computer-attack-list" type="none">
+          <li id="character-gallery-attack-computer">...attacks with</li>
+        </ul>
       </div>
+    </div>
+    <div class="button-container">
+      <button id="game-interface-play-button" type="button">Play</button>
     </div>
   </body>
 </html>
